@@ -1,0 +1,11 @@
+# Optional syntax error test.
+# Rename this file to optional_syntax_error.tf only if you want to test terraform_syntax detection.
+
+resource "azurerm_resource_group" "broken" {
+  name     = "rg-broken-syntax"
+  location = "polandcentral"
+
+  tags = {
+    environment = "dev"
+    owner       = "security-team"
+  # Missing closing brace for tags and resource block on purpose.
