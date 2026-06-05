@@ -1,0 +1,3 @@
+resource "azurerm_resource_group" "test" {
+  name = "rg-test"
+  location = "westeurope"
